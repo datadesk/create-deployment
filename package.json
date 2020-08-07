@@ -1,0 +1,36 @@
+{
+	"name": "create-deployment",
+	"version": "0.0.0",
+	"private": true,
+	"description": "A GitHub Action to facilitate the creation of a GitHub Deployment.",
+	"main": "dist/index.js",
+	"scripts": {
+		"package": "ncc build src/index.ts --source-map",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/datadesk/create-deployment.git"
+	},
+	"keywords": [
+		"github-action",
+		"deployments",
+		"datagraphics"
+	],
+	"author": "Ryan Murphy <ryan.murphy@latimes.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/datadesk/create-deployment/issues"
+	},
+	"homepage": "https://github.com/datadesk/create-deployment#readme",
+	"dependencies": {},
+	"devDependencies": {
+		"@actions/core": "^1.2.4",
+		"@actions/github": "^4.0.0",
+		"@datagraphics/prettier-config": "^2.0.0",
+		"@zeit/ncc": "^0.22.3",
+		"prettier": "^2.0.5",
+		"typescript": "^3.9.7"
+	},
+	"prettier": "@datagraphics/prettier-config"
+}

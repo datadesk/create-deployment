@@ -1,0 +1,32 @@
+name: Create Deployment
+description: A GitHub Action to facilitate the creation of a GitHub Deployment
+author: Ryan Murphy
+inputs:
+  github-token:
+    description: The GitHub token used to create an authenticated client
+    default: ${{ github.token }}
+    required: false
+  environment:
+    description: Name for the target deployment environment
+    default: 'production'
+    required: false
+  description:
+    description: Short description of the deployment
+    default: ''
+    required: false
+  environment-url:
+    description: The URL for accessing your environment
+    default: ''
+    required: false
+  initial-state:
+    description: The initial state of the deployment status
+    default: 'pending'
+    required: false
+outputs:
+  deployment-id:
+    description: The ID that references the created deployment
+  deployment-status-id:
+    description: The ID that references the created deployment status
+runs:
+  using: node12
+  main: dist/index.js
